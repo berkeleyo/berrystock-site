@@ -11,6 +11,10 @@
 
 *{ box-sizing:border-box; }
 
+html{ 
+  scroll-behavior:smooth;
+}
+
 html,body{ margin:0; padding:0; }
 
 body{
@@ -59,18 +63,43 @@ nav .inner{
   border-radius:10px;
 }
 
+.navlinks{
+  display:flex;
+  gap:4px;
+}
+
 .navlinks a{
   color:var(--muted);
-  margin-left:18px;
+  padding:8px 14px;
   font-size:14px;
   text-decoration:none;
   transition:color .2s;
+  position:relative;
 }
 
-.navlinks a:hover{ color:var(--text); }
+.navlinks a:after{
+  content:'';
+  position:absolute;
+  bottom:4px;
+  left:14px;
+  right:14px;
+  height:2px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transition:transform .2s;
+}
+
+.navlinks a:hover{
+  color:var(--text);
+}
+
+.navlinks a:hover:after{
+  transform:scaleX(1);
+}
 
 .hero{
   padding:80px 0 50px;
+  background:linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
 }
 
 h1{
@@ -152,6 +181,24 @@ h1{
   box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
+.cta-secondary{
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:var(--radius);
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--line);
+  font-weight:600;
+  text-decoration:none;
+  transition:all .2s;
+}
+
+.cta-secondary:hover{
+  border-color:var(--accent);
+  background:var(--panel);
+  transform:translateY(-2px);
+}
+
 .footer{
   padding:40px 0;
   border-top:1px solid var(--line);
@@ -206,27 +253,6 @@ h1{
   box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
-/* Contact page styles */
-.contact-info {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.email-link {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--accent);
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.email-link:hover {
-  opacity: 0.7;
-}
-
 section ul {
   margin: 1.5rem 0;
   padding-left: 1.5rem;
@@ -243,5 +269,46 @@ section ul li strong {
 
 @media(max-width:768px){
   h1{ font-size:32px; }
-  .footer-content{ flex-direction:column; align-items:flex-start; }
+  .hero{ padding:60px 0 40px; }
+  .section{ padding:40px 0; }
+  
+  nav .inner{
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-start;
+  }
+  
+  .navlinks{
+    width:100%;
+    flex-wrap:wrap;
+  }
+  
+  .navlinks a{
+    flex:1;
+    min-width:80px;
+    text-align:center;
+  }
+  
+  .footer-content{ 
+    flex-direction:column; 
+    align-items:flex-start; 
+  }
+  
+  .grid{
+    grid-template-columns:1fr;
+  }
+  
+  .cta, .cta-secondary{
+    width:100%;
+    text-align:center;
+  }
+}
+
+@media(max-width:768px){
+  .cta, .cta-secondary, .linkedin-btn{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
 }

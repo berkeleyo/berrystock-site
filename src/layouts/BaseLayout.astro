@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const {
   title = "Berrystock Solutions",
   description = "Secure, scalable cloud platforms and business systems integration.",
@@ -12,7 +14,20 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://berrystocksolutions.co.uk" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
 
   <body>

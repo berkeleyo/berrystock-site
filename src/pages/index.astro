@@ -2,68 +2,134 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout>
-  <section class="hero">
-    <div class="container">
-      <h1>
-        Secure, scalable cloud platforms and business systems integration.
-      </h1>
+<BaseLayout title="Berrystock Solutions">
+  <link rel="stylesheet" href="/src/styles/home-modern.css" />
 
-      <p class="lead">
-        Platform engineering, cloud management, and automation-led delivery
-        for organisations that need reliable infrastructure and modern cloud architecture.
-      </p>
+  <div class="home-wrap">
+    <section class="home-hero">
+      <div class="container">
+        <div class="kicker">Berrystock Solutions</div>
+        <h1 class="h-title">We deliver cloud, ERP, and AI systems that actually get adopted.</h1>
+        <p class="h-lead">
+          Secure cloud platforms. ERP and CRM integration. Real estate automation. AI workflows with controls.
+          Built end-to-end, deployed cleanly, and handed over with a runbook.
+        </p>
 
-      <div style="margin-top:28px;">
-        <a class="cta" href="/contact">Start a Project</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>What We Deliver</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Structured Cloud Foundations</h3>
-          <p>
-            Clear architecture, secure access patterns, and governance models
-            that scale without becoming fragile.
-          </p>
-          <ul>
-            <li>Identity-first platform design</li>
-            <li>Secure network architecture</li>
-            <li>Operational governance models</li>
-          </ul>
+        <div class="actions">
+          <a class="btn btn-primary" href="/contact">Get in touch</a>
+          <a class="btn btn-ghost" href="/work">See proof</a>
+          <a class="btn btn-ghost" href="/services">Solutions</a>
         </div>
 
-        <div class="card">
-          <h3>Business System Integration</h3>
-          <p>
-            ERP, CRM, telephony, identity, and automation connected into
-            clean operational workflows.
-          </p>
-          <ul>
-            <li>Workflow automation</li>
-            <li>System-to-system integration</li>
-            <li>Email & identity alignment</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Operational Improvement</h3>
-          <p>
-            Cost control, reliability engineering, monitoring, and structured
-            incident readiness.
-          </p>
-          <ul>
-            <li>Monitoring & alerting structure</li>
-            <li>Cost optimisation controls</li>
-            <li>Incident response planning</li>
-          </ul>
+        <div class="badges">
+          <span class="badge">Senior-only delivery</span>
+          <span class="badge">Security-first</span>
+          <span class="badge">System integration</span>
+          <span class="badge">Automation-led</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="panel">
+            <p class="problem">You bought the tools. The pilots never scaled. Nothing stuck.</p>
+            <p class="p">
+              Most teams don’t fail because they lack software. They fail because there’s no platform foundation,
+              no operating model, and no integration plan. We fix that.
+            </p>
+            <ul class="list">
+              <li>Cloud foundations that support security and scale</li>
+              <li>ERP/CRM integration that matches real workflows</li>
+              <li>Automation that has boundaries, auditability, and ownership</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <p class="p"><strong>What we build</strong></p>
+            <ul class="list">
+              <li><strong>Cloud:</strong> Azure platforms, governance, identity, networking</li>
+              <li><strong>ERP/CRM:</strong> deployments, integration, reporting</li>
+              <li><strong>AI:</strong> safe automation, agents with controls, event-driven pipelines</li>
+              <li><strong>Real estate:</strong> enquiry → qualify → book → sync → report</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <h2 class="h2">Trusted by teams that need outcomes</h2>
+
+        <div class="marquee" aria-label="Client logos marquee">
+          <div class="track">
+            <span class="logo">Property Ops</span>
+            <span class="logo">Construction</span>
+            <span class="logo">Professional Services</span>
+            <span class="logo">Operations Teams</span>
+            <span class="logo">SMB to Mid-Market</span>
+            <span class="logo">Asset Businesses</span>
+
+            <span class="logo">Property Ops</span>
+            <span class="logo">Construction</span>
+            <span class="logo">Professional Services</span>
+            <span class="logo">Operations Teams</span>
+            <span class="logo">SMB to Mid-Market</span>
+            <span class="logo">Asset Businesses</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <h2 class="h2">How we deliver</h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">01 • Define</div>
+            <h3>Opportunity and architecture</h3>
+            <p>
+              We identify what’s worth building, design the target state, and define a delivery plan your team can own.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="n">02 • Build</div>
+            <h3>Platforms, integrations, automation</h3>
+            <p>
+              Cloud foundations, ERP/CRM integration, and AI automation built with security controls and clear milestones.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="n">03 • Adopt</div>
+            <h3>Make it stick</h3>
+            <p>
+              Training, handover, documentation, and operational readiness — so it’s not “a project”, it’s how work gets done.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="panel cta-box">
+          <div>
+            <h3>Tell us where you’re at. We’ll map the next move.</h3>
+            <p class="p" style="margin-top:8px;">
+              A short call to align on outcomes, constraints, and the fastest path to delivery.
+            </p>
+          </div>
+          <div class="actions" style="margin:0;">
+            <a class="btn btn-primary" href="/contact">Get in touch</a>
+            <a class="btn btn-ghost" href="mailto:enquiries@berrystocksolutions.co.uk">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </BaseLayout>

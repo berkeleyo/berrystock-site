@@ -1,86 +1,222 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/home-modern.css";
 ---
 
-<BaseLayout title="Services | Berrystock Solutions">
-  <section class="hero">
-    <div class="container">
-      <h1>What We Do</h1>
-      <p class="lead">
-        Structured cloud architecture, business systems integration, and operational improvement delivered with clarity and engineering discipline.
-      </p>
-    </div>
-  </section>
+<BaseLayout
+  title="Services | Berrystock Solutions"
+  description="Cloud platform engineering, identity and access, FinOps, automation, and systems integration."
+>
+  <div class="page-wrap">
 
-  <section class="section">
-    <div class="container">
-      <h2>Core Capabilities</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Platform Architecture</h3>
-          <p>Cloud foundations that are structured, secure, and scalable — built with operational reality in mind.</p>
-          <ul>
-            <li>Architecture & design reviews</li>
-            <li>Secure access patterns (identity-first)</li>
-            <li>Network segmentation & operational standards</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Cloud Operations</h3>
-          <p>Stabilise and improve environments with a focus on reliability, visibility, and cost control.</p>
-          <ul>
-            <li>Hardening & operational hygiene</li>
-            <li>Cost optimisation & governance</li>
-            <li>Monitoring & incident readiness</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Business Systems Integration</h3>
-          <p>Connect ERP, CRM, telephony, and automation into structured workflows that reduce manual work.</p>
-          <ul>
-            <li>Workflow automation</li>
-            <li>Email & identity integration</li>
-            <li>Structured data & reporting</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Delivery & Migration</h3>
-          <p>Move services safely with clear change control, rollback paths, and documentation that enables ownership.</p>
-          <ul>
-            <li>Cutover & rollback strategy</li>
-            <li>Secure hosting patterns</li>
-            <li>Runbooks & handover-ready documentation</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Security & Identity</h3>
-          <p>Identity-first access models and practical security controls aligned to real-world operations.</p>
-          <ul>
-            <li>Zero-trust access design</li>
-            <li>Role-based access governance</li>
-            <li>Security posture improvements</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Automation & Engineering</h3>
-          <p>Infrastructure as code and repeatable deployment patterns that reduce risk and improve delivery speed.</p>
-          <ul>
-            <li>Infrastructure as Code</li>
-            <li>CI/CD patterns</li>
-            <li>Operational scripting & tooling</li>
-          </ul>
+    <section class="hero">
+      <div class="container">
+        <div class="kicker reveal">Services</div>
+        <h1 class="h-display reveal">
+          Serious engineering.<br />
+          <span class="accent">Across Azure, AWS, and beyond.</span>
+        </h1>
+        <p class="h-lead reveal">
+          From a broken IAM setup to a full cloud migration —
+          the hard, specific work most consultancies avoid.
+        </p>
+        <div class="actions reveal">
+          <button class="btn btn-primary" type="button" data-modal-open>
+            Get in Touch <span class="arr">›</span>
+          </button>
+          <a class="btn btn-ghost" href="/">Home</a>
         </div>
       </div>
+    </section>
 
-      <div style="margin-top:28px;">
-        <a class="cta" href="mailto:enquiries@berrystocksolutions.co.uk">Discuss Your Project</a>
+    <!-- CLOUD PLATFORMS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">Cloud platforms</p>
+          <h2 class="section-title">Built properly from the start.</h2>
+          <p class="section-lead">Landing zones, IaC, governance, and secure networking. architected for how the business actually operates, not how a checklist says it should.</p>
+        </div>
+        <div class="pill-grid reveal">
+          <div class="pill">
+            <strong>Landing zones</strong>
+            <span>Azure and AWS environments structured to scale safely</span>
+          </div>
+          <div class="pill">
+            <strong>Infrastructure as Code</strong>
+            <span>Terraform, Bicep. repeatable, reviewable, version-controlled</span>
+          </div>
+          <div class="pill">
+            <strong>Networking</strong>
+            <span>Hub-spoke, VPNs, private endpoints, ExpressRoute</span>
+          </div>
+          <div class="pill">
+            <strong>Policy & governance</strong>
+            <span>Azure Policy, SCPs, guardrails that enforce without blocking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDENTITY & ACCESS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">Identity & access</p>
+          <h2 class="section-title">The mess most teams inherit.</h2>
+          <p class="section-lead">Overprivileged roles, stale access, no JIT. We fix the foundations and make access something you can audit and defend.</p>
+        </div>
+        <div class="pill-grid reveal">
+          <div class="pill">
+            <strong>JIT access</strong>
+            <span>Azure PIM, AWS IAM Identity Center. access when needed, gone when not</span>
+          </div>
+          <div class="pill">
+            <strong>RBAC cleanup</strong>
+            <span>Role sprawl removed, least-privilege enforced across the board</span>
+          </div>
+          <div class="pill">
+            <strong>Conditional access</strong>
+            <span>MFA, device compliance, location policies. properly configured</span>
+          </div>
+          <div class="pill">
+            <strong>Multi-cloud IAM</strong>
+            <span>Consistent access patterns across Azure, AWS, and GCP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINOPS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">FinOps & governance</p>
+          <h2 class="section-title">Stop guessing what cloud costs.</h2>
+          <p class="section-lead">Tagging enforcement, budget controls, anomaly alerts, and rightsizing. so the bill reflects what you actually need.</p>
+        </div>
+        <div class="pill-grid reveal">
+          <div class="pill">
+            <strong>Cost tagging at scale</strong>
+            <span>Policy-enforced tags, automated repair, full cost attribution</span>
+          </div>
+          <div class="pill">
+            <strong>Budget governance</strong>
+            <span>Alerts, controls, and policies before spend becomes a problem</span>
+          </div>
+          <div class="pill">
+            <strong>Rightsizing</strong>
+            <span>Idle resources identified, oversized workloads cut down</span>
+          </div>
+          <div class="pill">
+            <strong>Observability</strong>
+            <span>Grafana dashboards, monitoring, and alerting that surfaces what matters</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTOMATION & SYSTEMS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">Automation & systems integration</p>
+          <h2 class="section-title">Manual work your team shouldn't be doing.</h2>
+          <p class="section-lead">Salesforce, HubSpot, Microsoft 365, Make, n8n. connected and automated so your systems talk to each other and your team stops filling in the gaps.</p>
+        </div>
+        <div class="pill-grid reveal">
+          <div class="pill">
+            <strong>CRM implementation</strong>
+            <span>Salesforce and HubSpot. set up properly, not just turned on</span>
+          </div>
+          <div class="pill">
+            <strong>Workflow automation</strong>
+            <span>Make, n8n, Zapier. the right tool for the job, built to last</span>
+          </div>
+          <div class="pill">
+            <strong>Microsoft 365 & Dynamics</strong>
+            <span>Identity alignment, Teams, Exchange, and Dynamics integration</span>
+          </div>
+          <div class="pill">
+            <strong>Custom APIs & pipelines</strong>
+            <span>When off-the-shelf doesn't cut it. built clean, documented properly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- AI & AGENTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">AI & automation agents</p>
+          <h2 class="section-title">AI that runs in production.</h2>
+          <p class="section-lead">Not demos, not prototypes. Agents and automation pipelines built with the controls, audit trails, and failure handling that real operations require.</p>
+        </div>
+        <div class="pill-grid reveal">
+          <div class="pill">
+            <strong>Automation agents</strong>
+            <span>Task-specific agents built on proven frameworks, scoped and safe to deploy</span>
+          </div>
+          <div class="pill">
+            <strong>Workflow automation</strong>
+            <span>Multi-step pipelines across systems — triggered, monitored, recoverable</span>
+          </div>
+          <div class="pill">
+            <strong>LLM integration</strong>
+            <span>AI embedded into existing tools and workflows, not bolted on top</span>
+          </div>
+          <div class="pill">
+            <strong>Controls & guardrails</strong>
+            <span>Approval gates, audit logs, and boundaries so automation stays in scope</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT MODELS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">How we engage</p>
+          <h2 class="section-title">Flexible by design.</h2>
+        </div>
+        <div class="step-grid" style="margin-top:40px;">
+          <div class="step-card reveal">
+            <div class="step-num">Option A</div>
+            <h3>Fix a specific problem</h3>
+            <p>IAM cleanup, cloud cost overrun, broken integration. Defined scope, clear deliverable, done.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">Option B</div>
+            <h3>Build something new</h3>
+            <p>Landing zone, platform, CRM implementation. End-to-end delivery with handover and documentation.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">Option C</div>
+            <h3>Ongoing engineering support</h3>
+            <p>Retained access to a senior engineer without the full-time cost. For when you always have something that needs doing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-band">
+      <div class="container reveal">
+        <h2 class="h-display">
+          Know what you need?<br />
+          <span class="accent">Let's get into it.</span>
+        </h2>
+        <div class="actions">
+          <button class="btn btn-primary" type="button" data-modal-open>
+            Get in Touch <span class="arr">›</span>
+          </button>
+          <a class="btn btn-ghost" href="mailto:enquiries@berrystocksolutions.co.uk">Email directly</a>
+        </div>
       </div>
     </div>
-  </section>
+
+  </div>
 </BaseLayout>

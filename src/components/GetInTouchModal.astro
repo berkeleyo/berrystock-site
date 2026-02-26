@@ -1,0 +1,127 @@
+---
+/**
+ * Contact modal — uses Web3Forms (free tier, no backend needed).
+ * 
+ * SETUP (one-time, free):
+ *   1. Go to https://web3forms.com
+ *   2. Enter enquiries@berrystocksolutions.co.uk
+ *   3. They email you a free access key
+ *   4. Replace YOUR_ACCESS_KEY_HERE below with that key
+ * 
+ * That's it. Submissions arrive in your inbox, no Cloudflare Workers needed.
+ */
+---
+
+<dialog id="getInTouchModal" class="bs-modal">
+  <div class="bs-modal__card">
+    <button class="bs-modal__close" type="button" data-modal-close aria-label="Close">✕</button>
+
+    <h2 class="bs-modal__title">Get in touch</h2>
+    <p class="bs-modal__subtitle">Tell us what you're dealing with. We'll take it from there.</p>
+
+    <!-- Success state (hidden by default) -->
+    <div id="formSuccess" style="display:none; text-align:center; padding: 40px 0;">
+      <div style="font-size: 32px; margin-bottom: 16px;">✓</div>
+      <h3 style="font-size: var(--fs-4); font-weight: 700; margin-bottom: 8px; color: var(--accent);">Message received.</h3>
+      <p style="color: var(--muted-d); font-size: var(--fs-2);">We'll come back to you directly — usually same day.</p>
+    </div>
+
+    <form id="contactForm" class="bs-form">
+      <!-- Web3Forms access key — replace with yours from web3forms.com (free) -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+      <input type="hidden" name="subject" value="New enquiry — Berrystock Solutions" />
+      <input type="hidden" name="from_name" value="Berrystock Website" />
+      <!-- Honeypot spam field -->
+      <input type="checkbox" name="botcheck" style="display:none;" />
+
+      <div class="bs-form__grid">
+        <label>
+          <span>First name</span>
+          <input name="first_name" required autocomplete="given-name" />
+        </label>
+        <label>
+          <span>Last name</span>
+          <input name="last_name" required autocomplete="family-name" />
+        </label>
+        <label class="span-2">
+          <span>Work email</span>
+          <input name="email" type="email" required autocomplete="email" />
+        </label>
+        <label>
+          <span>Company</span>
+          <input name="company" autocomplete="organization" />
+        </label>
+        <label>
+          <span>Role</span>
+          <input name="role" placeholder="CTO, IT Manager, Founder…" />
+        </label>
+        <label class="span-2">
+          <span>What do you need help with?</span>
+          <select name="service" required>
+            <option value="" selected disabled>Select one</option>
+            <option>Cloud platform build or landing zone</option>
+            <option>Identity & access (IAM / RBAC / JIT)</option>
+            <option>FinOps & cloud cost governance</option>
+            <option>On-prem to cloud migration</option>
+            <option>Automation & workflow engineering</option>
+            <option>CRM implementation (Salesforce / HubSpot)</option>
+            <option>Ongoing engineering support</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label class="span-2">
+          <span>Tell us more</span>
+          <textarea name="message" rows="4" placeholder="Platform, current state, timeline, constraints — the more context the better."></textarea>
+        </label>
+      </div>
+
+      <div class="bs-form__actions">
+        <button class="bs-btn" type="submit" id="submitBtn">
+          Send Message <span style="font-size:11px;">›</span>
+        </button>
+      </div>
+
+      <p id="formError" style="display:none; text-align:center; margin-top:12px; color:#f87171; font-size:var(--fs-1);">
+        Something went wrong. Email us directly at enquiries@berrystocksolutions.co.uk
+      </p>
+    </form>
+  </div>
+</dialog>
+
+<script>
+  const form = document.getElementById("contactForm") as HTMLFormElement | null;
+  const submitBtn = document.getElementById("submitBtn") as HTMLButtonElement | null;
+  const successEl = document.getElementById("formSuccess");
+  const errorEl = document.getElementById("formError");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!submitBtn) return;
+
+    submitBtn.textContent = "Sending…";
+    submitBtn.disabled = true;
+    if (errorEl) errorEl.style.display = "none";
+
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        form.style.display = "none";
+        if (successEl) successEl.style.display = "block";
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch {
+      if (errorEl) errorEl.style.display = "block";
+      submitBtn.textContent = "Send Message ›";
+      submitBtn.disabled = false;
+    }
+  });
+</script>

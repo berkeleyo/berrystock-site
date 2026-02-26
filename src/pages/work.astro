@@ -1,108 +1,112 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/home-modern.css";
 ---
 
-<BaseLayout title="How We Work | Berrystock Solutions">
-  <section class="hero">
-    <div class="container">
-      <h1>How We Work</h1>
-      <p class="lead">
-        We design and deliver structured cloud platforms and integrated business systems 
-        with security, clarity and long-term operability built in from day one.
-      </p>
-    </div>
-  </section>
+<BaseLayout
+  title="How We Work | Berrystock Solutions"
+  description="Outcome-led architecture, secure by design, structured delivery. how Berrystock approaches every engagement."
+>
+  <div class="page-wrap">
 
-  <section class="section">
-    <div class="container">
-      <h2>Our Approach</h2>
-
-      <div class="grid">
-
-        <div class="card">
-          <h3>Outcome-Led Architecture</h3>
-          <p>
-            We begin with business objectives, not tooling. Architecture decisions 
-            are aligned to risk tolerance, growth plans, and operational maturity.
-          </p>
-          <ul>
-            <li>Clear platform structure</li>
-            <li>Defined ownership & access models</li>
-            <li>Scalable foundations</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Secure by Design</h3>
-          <p>
-            Identity-first access patterns and restricted management surfaces 
-            reduce risk without increasing operational friction.
-          </p>
-          <ul>
-            <li>MFA & conditional access alignment</li>
-            <li>Least-privilege access control</li>
-            <li>Hardened management endpoints</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Structured Delivery</h3>
-          <p>
-            Change is delivered with staged rollout, rollback planning, and 
-            documented operating procedures.
-          </p>
-          <ul>
-            <li>Cutover & rollback strategy</li>
-            <li>Pre-flight validation</li>
-            <li>Runbooks & handover-ready documentation</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Business Systems Integration</h3>
-          <p>
-            We connect cloud infrastructure with ERP, CRM, telephony, and workflow 
-            automation to remove manual effort and improve visibility.
-          </p>
-          <ul>
-            <li>System-to-system integration</li>
-            <li>Email & identity alignment</li>
-            <li>Structured data flows</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Operational Discipline</h3>
-          <p>
-            Platforms are designed to be maintainable. Visibility, monitoring, 
-            cost control, and change governance are embedded.
-          </p>
-          <ul>
-            <li>Monitoring & alerting structure</li>
-            <li>Cost optimisation controls</li>
-            <li>Clear change management approach</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Automation-Driven Engineering</h3>
-          <p>
-            Repeatable patterns reduce risk and accelerate delivery while ensuring 
-            environments remain consistent over time.
-          </p>
-          <ul>
-            <li>Infrastructure as Code</li>
-            <li>Deployment standardisation</li>
-            <li>Operational scripting</li>
-          </ul>
-        </div>
-
+    <section class="hero">
+      <div class="container">
+        <div class="kicker">How we work</div>
+        <h1 class="h-display">
+          Architecture with a<br />
+          <span class="accent">delivery plan behind it.</span>
+        </h1>
+        <p class="h-lead">
+          Secure cloud platforms and integrated business systems. designed for
+          clarity, built for operability, and structured so your team can own
+          what we hand over.
+        </p>
       </div>
+    </section>
 
-      <div style="margin-top:30px;">
-        <a class="cta" href="/contact">Start a Conversation</a>
+    <!-- APPROACH -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Our approach</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-num">01</div>
+            <h3>Outcome-led architecture</h3>
+            <p>We begin with business objectives, not tooling. Architecture decisions align to risk tolerance, growth plans, and operational maturity.</p>
+            <ul>
+              <li>Clear platform structure</li>
+              <li>Defined ownership and access models</li>
+              <li>Scalable foundations</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-num">02</div>
+            <h3>Secure by design</h3>
+            <p>Identity-first access patterns and restricted management surfaces reduce risk without increasing operational friction.</p>
+            <ul>
+              <li>MFA and conditional access alignment</li>
+              <li>Least-privilege access control</li>
+              <li>Hardened management endpoints</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-num">03</div>
+            <h3>Structured delivery</h3>
+            <p>Change is delivered with staged rollout, rollback planning, and documented operating procedures. every time.</p>
+            <ul>
+              <li>Cutover and rollback strategy</li>
+              <li>Pre-flight validation</li>
+              <li>Runbooks and handover docs</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-num">04</div>
+            <h3>Business systems integration</h3>
+            <p>We connect cloud infrastructure with ERP, CRM, telephony, and workflow automation to remove manual effort and improve visibility.</p>
+            <ul>
+              <li>System-to-system integration</li>
+              <li>Email and identity alignment</li>
+              <li>Structured data flows</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-num">05</div>
+            <h3>Operational discipline</h3>
+            <p>Platforms are designed to be maintainable. Visibility, monitoring, cost control, and change governance are embedded from day one.</p>
+            <ul>
+              <li>Monitoring and alerting structure</li>
+              <li>Cost optimisation controls</li>
+              <li>Clear change management approach</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-num">06</div>
+            <h3>Automation-driven engineering</h3>
+            <p>Repeatable patterns reduce risk and accelerate delivery while ensuring environments remain consistent over time.</p>
+            <ul>
+              <li>Infrastructure as Code</li>
+              <li>Deployment standardisation</li>
+              <li>Operational scripting</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
+    <!-- CTA -->
+    <div class="cta-band">
+      <div class="container">
+        <p class="statement" style="margin: 0 auto 12px; text-align:center;">
+          Ready to <span class="accent">move from plan to production?</span>
+        </p>
+        <div class="actions" style="justify-content:center; margin-top:28px;">
+          <button class="btn btn-primary" type="button" data-modal-open>
+            Start a Conversation <span class="arrow">›</span>
+          </button>
+          <a class="btn btn-ghost" href="/services">View Services</a>
+        </div>
+      </div>
     </div>
-  </section>
+
+  </div>
 </BaseLayout>

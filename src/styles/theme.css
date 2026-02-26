@@ -1,0 +1,35 @@
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --fs-0: 11px;
+  --fs-1: 13px;
+  --fs-2: 15px;
+  --fs-3: 17px;
+  --fs-4: 21px;
+  --fs-5: 26px;
+  --fs-6: 34px;
+  --fs-7: 48px;
+  --fs-8: 66px;
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.18;
+  --lh-normal: 1.55;
+
+  /* Blue accent */
+  --accent: #4f8ef7;
+  --accent-glow: rgba(79, 142, 247, 0.20);
+  --accent-border: rgba(79, 142, 247, 0.32);
+
+  /* Dark */
+  --bg-d:      #09090f;
+  --bg-d2:     #0e0f18;
+  --fg-d:      rgba(240, 242, 250, 0.96);
+  --muted-d:   rgba(240, 242, 250, 0.48);
+  --border-d:  rgba(240, 242, 250, 0.08);
+  --card-d:    rgba(240, 242, 250, 0.035);
+
+  --shadow-1: 0 24px 80px rgba(0,0,0,0.65);
+  --r-1: 8px;
+  --r-2: 12px;
+  --r-3: 16px;
+}

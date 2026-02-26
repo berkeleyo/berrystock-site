@@ -1,135 +1,144 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/home-modern.css";
 ---
 
-<BaseLayout title="Berrystock Solutions">
-  <link rel="stylesheet" href="/src/styles/home-modern.css" />
+<BaseLayout
+  title="Berrystock Solutions"
+  description="Senior cloud engineering, identity, automation, and systems integration. Azure, AWS, Salesforce, and the full stack in between."
+>
+  <div class="page-wrap">
 
-  <div class="home-wrap">
-    <section class="home-hero">
+    <section class="hero">
       <div class="container">
-        <div class="kicker">Berrystock Solutions</div>
-        <h1 class="h-title">We deliver cloud, ERP, and AI systems that actually get adopted.</h1>
-        <p class="h-lead">
-          Secure cloud platforms. ERP and CRM integration. Real estate automation. AI workflows with controls.
-          Built end-to-end, deployed cleanly, and handed over with a runbook.
-        </p>
+        <div class="kicker reveal">Berrystock Solutions · London</div>
 
+        <h1 class="h-display reveal">
+          Complex infrastructure.<br />
+          <span class="accent">Delivered clean.</span>
+        </h1>
+
+        <div class="actions reveal">
+          <button class="btn btn-primary" type="button" data-modal-open>
+            Get in Touch <span class="arr">›</span>
+          </button>
+          <a class="btn btn-ghost" href="/services">See what we do</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="statement-block reveal">
+      <div class="container">
+        <span class="statement-line">Your cloud grew fast. Access is a mess.</span>
+        <span class="statement-line">The tools were bought. Nothing shipped.</span>
+        <span class="statement-line"><span class="accent">That's exactly where we start.</span></span>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">What we do</p>
+          <h2 class="section-title">Real outcomes. Across the full stack.</h2>
+          <p class="section-lead">Not a generalist. Not an agency. A senior engineer who has done it — cloud spend cut, IAM cleaned up, platforms built from zero.</p>
+        </div>
+
+        <div class="service-grid reveal">
+          <div class="service-card">
+            <div class="service-icon">☁</div>
+            <h3>Cloud platforms</h3>
+            <p>Landing zones, IaC, governance, and secure networking on Azure and AWS.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">⬡</div>
+            <h3>Identity & access</h3>
+            <p>JIT access, RBAC cleanup, conditional access, and IAM that actually works.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">◈</div>
+            <h3>FinOps & governance</h3>
+            <p>Cost tagging, budget controls, and policy guardrails that stop surprise bills.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">⚙</div>
+            <h3>Automation & systems</h3>
+            <p>Salesforce, HubSpot, Make, and custom pipelines, integrated and running.</p>
+          </div>
+          <div class="service-card" style="grid-column: span 4; border-top: 1px solid var(--border-d);">
+            <div class="service-icon">◎</div>
+            <h3>AI & automation agents</h3>
+            <p>Agents and pipelines built with the controls and audit trails that production actually requires.</p>
+          </div>
+        </div>
+
+        <div class="marquee-wrap">
+          <div class="marquee-track">
+            <span class="marquee-item">Azure landing zones</span>
+            <span class="marquee-item">IAM & RBAC</span>
+            <span class="marquee-item">FinOps & cost control</span>
+            <span class="marquee-item">Terraform & Bicep</span>
+            <span class="marquee-item">AWS workloads</span>
+            <span class="marquee-item">Salesforce & HubSpot</span>
+            <span class="marquee-item">On-prem migration</span>
+            <span class="marquee-item">JIT access</span>
+            <span class="marquee-item">Make / n8n / Zapier</span>
+            <span class="marquee-item">Azure landing zones</span>
+            <span class="marquee-item">IAM & RBAC</span>
+            <span class="marquee-item">FinOps & cost control</span>
+            <span class="marquee-item">Terraform & Bicep</span>
+            <span class="marquee-item">AWS workloads</span>
+            <span class="marquee-item">Salesforce & HubSpot</span>
+            <span class="marquee-item">On-prem migration</span>
+            <span class="marquee-item">JIT access</span>
+            <span class="marquee-item">Make / n8n / Zapier</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-inner reveal">
+          <p class="kicker">How it works</p>
+          <h2 class="section-title">No account managers. No handoffs.</h2>
+          <p class="section-lead">You talk to the engineer. The engineer does the work. You get something you can run.</p>
+        </div>
+
+        <div class="step-grid">
+          <div class="step-card reveal">
+            <div class="step-num">01 Scope</div>
+            <h3>Straight conversation</h3>
+            <p>Tell us what's broken or what you're building. We'll tell you what it takes and whether we're the right fit.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">02 Build</div>
+            <h3>Senior hands on it</h3>
+            <p>No juniors, no outsourcing. The work gets done properly, with quality gates and zero shortcuts.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">03 Hand over</div>
+            <h3>Yours to run</h3>
+            <p>Documentation, runbooks, and an operating model. Not a dependency — a platform you own.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="container reveal">
+        <h2 class="h-display">
+          Tell us what's broken.<br />
+          <span class="accent">We'll tell you how to fix it.</span>
+        </h2>
+        <p style="color: var(--muted-d); font-size: var(--fs-2); margin-bottom: 32px;">No pitch. No proposal theatre. Just a direct technical conversation.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact">Get in touch</a>
-          <a class="btn btn-ghost" href="/work">See proof</a>
-          <a class="btn btn-ghost" href="/services">Solutions</a>
-        </div>
-
-        <div class="badges">
-          <span class="badge">Senior-only delivery</span>
-          <span class="badge">Security-first</span>
-          <span class="badge">System integration</span>
-          <span class="badge">Automation-led</span>
+          <button class="btn btn-primary" type="button" data-modal-open>
+            Get in Touch <span class="arr">›</span>
+          </button>
+          <a class="btn btn-ghost" href="/services">View Services</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="home-section">
-      <div class="container">
-        <div class="grid-2">
-          <div class="panel">
-            <p class="problem">You bought the tools. The pilots never scaled. Nothing stuck.</p>
-            <p class="p">
-              Most teams don’t fail because they lack software. They fail because there’s no platform foundation,
-              no operating model, and no integration plan. We fix that.
-            </p>
-            <ul class="list">
-              <li>Cloud foundations that support security and scale</li>
-              <li>ERP/CRM integration that matches real workflows</li>
-              <li>Automation that has boundaries, auditability, and ownership</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <p class="p"><strong>What we build</strong></p>
-            <ul class="list">
-              <li><strong>Cloud:</strong> Azure platforms, governance, identity, networking</li>
-              <li><strong>ERP/CRM:</strong> deployments, integration, reporting</li>
-              <li><strong>AI:</strong> safe automation, agents with controls, event-driven pipelines</li>
-              <li><strong>Real estate:</strong> enquiry → qualify → book → sync → report</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-section">
-      <div class="container">
-        <h2 class="h2">Trusted by teams that need outcomes</h2>
-
-        <div class="marquee" aria-label="Client logos marquee">
-          <div class="track">
-            <span class="logo">Property Ops</span>
-            <span class="logo">Construction</span>
-            <span class="logo">Professional Services</span>
-            <span class="logo">Operations Teams</span>
-            <span class="logo">SMB to Mid-Market</span>
-            <span class="logo">Asset Businesses</span>
-
-            <span class="logo">Property Ops</span>
-            <span class="logo">Construction</span>
-            <span class="logo">Professional Services</span>
-            <span class="logo">Operations Teams</span>
-            <span class="logo">SMB to Mid-Market</span>
-            <span class="logo">Asset Businesses</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-section">
-      <div class="container">
-        <h2 class="h2">How we deliver</h2>
-
-        <div class="steps">
-          <div class="step">
-            <div class="n">01 • Define</div>
-            <h3>Opportunity and architecture</h3>
-            <p>
-              We identify what’s worth building, design the target state, and define a delivery plan your team can own.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="n">02 • Build</div>
-            <h3>Platforms, integrations, automation</h3>
-            <p>
-              Cloud foundations, ERP/CRM integration, and AI automation built with security controls and clear milestones.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="n">03 • Adopt</div>
-            <h3>Make it stick</h3>
-            <p>
-              Training, handover, documentation, and operational readiness — so it’s not “a project”, it’s how work gets done.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-section">
-      <div class="container">
-        <div class="panel cta-box">
-          <div>
-            <h3>Tell us where you’re at. We’ll map the next move.</h3>
-            <p class="p" style="margin-top:8px;">
-              A short call to align on outcomes, constraints, and the fastest path to delivery.
-            </p>
-          </div>
-          <div class="actions" style="margin:0;">
-            <a class="btn btn-primary" href="/contact">Get in touch</a>
-            <a class="btn btn-ghost" href="mailto:enquiries@berrystocksolutions.co.uk">Email</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </BaseLayout>

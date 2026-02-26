@@ -1,76 +1,71 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/home-modern.css";
 ---
 
-<BaseLayout title="Contact | Berrystock Solutions">
-  <section class="hero">
-    <div class="container">
-      <h1>Get in Touch</h1>
-      <p class="lead">
-        Let's discuss your cloud infrastructure, security architecture, or business systems integration needs.
-      </p>
-    </div>
-  </section>
+<BaseLayout
+  title="Contact | Berrystock Solutions"
+  description="Talk directly to the engineer. No sales team, no pitch. just a straight conversation about your problem."
+>
+  <div class="page-wrap">
 
-  <section class="section">
-    <div class="container">
-      <h2>Start a Conversation</h2>
-      <p style="max-width:760px; color:var(--muted); margin-bottom:32px;">
-        Direct access to experienced technical delivery. No sales teams, no handoffs — just clear conversation about your requirements and how we can help.
-      </p>
-
-      <div style="display:flex; gap:12px; margin-bottom:32px; flex-wrap:wrap;">
-        <a href="mailto:enquiries@berrystocksolutions.co.uk?subject=Enquiry from berrystocksolutions.co.uk" class="cta">
-          Send an Email
-        </a>
-        <a href="https://calendly.com/berkeley-berrystocksolutions/30min" target="_blank" rel="noopener" class="cta-secondary">
-          Book a Call
-        </a>
-      </div>
-
-      <div class="card" style="max-width:600px; margin-bottom:32px;">
-        <h3>Email Us</h3>
-        <p style="margin-bottom:8px;">
-          <a href="mailto:enquiries@berrystocksolutions.co.uk" style="color:var(--accent); font-size:18px; font-weight:600; text-decoration:none;">
-            enquiries@berrystocksolutions.co.uk
-          </a>
+    <section class="hero">
+      <div class="container">
+        <div class="kicker reveal">Contact</div>
+        <h1 class="h-display reveal">
+          You talk to the engineer.<br />
+          <span class="accent">Not a sales team.</span>
+        </h1>
+        <p class="h-lead reveal">
+          Describe what you're dealing with. We'll give you a straight answer
+          on what it takes. and whether we're the right fit.
         </p>
+        <div class="actions reveal">
+          <a class="btn btn-primary" href="mailto:enquiries@berrystocksolutions.co.uk">
+            Send an Email <span class="arr">›</span>
+          </a>
+          <a class="btn btn-ghost" href="https://calendly.com/berkeley-berrystocksolutions/30min" target="_blank" rel="noopener">
+            Book a Call
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="grid">
-        <div class="card">
-          <h3>What to Include</h3>
-          <p>To help us respond effectively:</p>
-          <ul>
-            <li>Your situation & objectives</li>
-            <li>Current infrastructure state</li>
-            <li>Timeline & constraints</li>
-            <li>Your role (CTO, IT Manager, etc.)</li>
-          </ul>
+    <section class="section">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-card reveal">
+            <div class="step-num">Email</div>
+            <h3>enquiries@berrystocksolutions.co.uk</h3>
+            <p>Direct inbox. Typically same-day. No CRM, no ticket queue.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">What helps</div>
+            <h3>Give us the context</h3>
+            <p>What platform, what's broken or what you're trying to build, and roughly when you need it done.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">What to expect</div>
+            <h3>A real answer</h3>
+            <p>Whether that's a scoping call, a rough effort estimate, or an honest "not the right fit". you'll get the truth, fast.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-          <h3>What Happens Next</h3>
-          <p>Direct founder response:</p>
-          <ul>
-            <li>Quick turnaround (typically same day)</li>
-            <li>Clear technical conversation</li>
-            <li>Honest assessment of fit</li>
-            <li>No obligation</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Our Approach</h3>
-          <p>Founder-run practice means:</p>
-          <ul>
-            <li>Direct technical engagement</li>
-            <li>Flexible engagement models</li>
-            <li>Clear scope & deliverables</li>
-            <li>Senior-level execution</li>
-          </ul>
+    <div class="cta-band">
+      <div class="container reveal">
+        <h2 class="h-display">
+          <span class="accent">Senior engineering.</span><br />
+          Without the headcount.
+        </h2>
+        <div class="actions">
+          <button class="btn btn-primary" type="button" data-modal-open>
+            Get in Touch <span class="arr">›</span>
+          </button>
         </div>
       </div>
     </div>
-  </section>
+
+  </div>
 </BaseLayout>
